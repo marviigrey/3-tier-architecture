@@ -11,3 +11,5 @@ The three tiers are typically:
 3. Data Tier: This is the data storage layer of the application, responsible for managing application data and ensuring its integrity. It often includes a database server or other data storage system that stores and retrieves data as needed.
 
 The three-tier architecture is a popular design pattern for web applications, as it allows for scalability, modularity, and flexibility in the development and deployment of complex software systems.
+
+We create two EC2-Instances,for database and web server. After this,we create 6 EBS volumes of 10 GB each and attach them to our instances. Moving forward,we setup our webserver by following the steps in the partition.sh scripts to configure our web server. each process is explained in the script, we do setup both our db and webserver.
