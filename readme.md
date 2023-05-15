@@ -13,3 +13,8 @@ The three tiers are typically:
 The three-tier architecture is a popular design pattern for web applications, as it allows for scalability, modularity, and flexibility in the development and deployment of complex software systems.
 
 We create two EC2-Instances,for database and web server. After this,we create 6 EBS volumes of 10 GB each and attach them to our instances. Moving forward,we setup our webserver by following the steps in the partition.sh scripts to configure our web server. each process is explained in the script, we do setup both our db and webserver.
+After configuring and setting up our ec2-instance and storage subsystems, we move forward to install our db which mysql on the database server and wordpress,mysql-client,php,apache on our web server. We created a simple database called wordpress and assigned a user to the database on our db server,also configure our db server to work with our wordpress.
+we move the wordpress into the apache /var/www/html directory to display our site dashboard.
+NOTE: On our db server security group,we ensure that an inbound rule allowing only port 3306 and setting only our web server to connect to our db by specifying the IP.
+For the web server,we ensure port 80 is open only,so we can be able to access wordpress dashboard through the <web-server-public-IP>:80/wordpress.
+  
